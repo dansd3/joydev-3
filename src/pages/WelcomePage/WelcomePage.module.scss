@@ -1,0 +1,18 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  &__author {
+    font-size: 24px;
+    color: #555;
+  }
+}

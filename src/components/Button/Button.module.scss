@@ -1,0 +1,57 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-family: 'SF Pro Text';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: inset 0px -1px 1px rgba(67, 90, 111, 0.2);
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.95);
+  }
+
+  &:active:not(:disabled) {
+    filter: brightness(0.9);
+  }
+
+  &--variant--primary {
+    @include button-style(#ffffff, #116ab8, #0788de, $color-border);
+  }
+
+  &--variant--danger {
+    @include button-style(#ffffff, #d64540, #ec4c47, $color-border);
+  }
+
+  &--variant--regular {
+    @include button-style($color-default, #f4f5f7, #ffffff, $color-border);
+  }
+
+  &--variant--minimal {
+    @include button-style($color-link, #ffffff, #ffffff, transparent);
+    box-shadow: none;
+  }
+
+  &--variant--disabled {
+    @include button-style($color-default, #425a700f, #425a700f, transparent);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  &--variant--active {
+    @include button-style($color-default, #1070ca17, #1070ca17, $color-border);
+  }
+
+  &__label {
+    display: inline-block;
+  }
+}

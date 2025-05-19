@@ -1,0 +1,40 @@
+.menu {
+  background-color: #f7f8fa;
+  padding: 16px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    color: black;
+    padding: 10px 16px;
+    display: inline-block;
+    border-radius: 6px;
+    transition: all 0.2s;
+    width: 200px;
+    text-align: center;
+
+    &:hover {
+      color: blue;
+      background-color: #f0f0f0;
+    }
+
+    &_active {
+      font-weight: bold;
+      background-color: #e0e0e0;
+    }
+  }
+}

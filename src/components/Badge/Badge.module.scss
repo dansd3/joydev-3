@@ -1,0 +1,97 @@
+@use '../../styles/variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'SF Pro Text';
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 16px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-weight: 800;
+  &--shape--badge {
+    border-radius: 2px;
+    padding: 0 6px;
+  }
+
+  &--shape--pill {
+    border-radius: 8px;
+    padding: 0 8px;
+  }
+
+  &--type--subtle--neutral {
+    background: $badge-neutral-bg-subtle;
+    color: $badge-neutral-text;
+  }
+  &--type--solid--neutral {
+    background: $badge-neutral-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--green {
+    background: $badge-green-bg-subtle;
+    color: $badge-green-text;
+  }
+  &--type--solid--green {
+    background: $badge-green-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--blue {
+    background: $badge-blue-bg-subtle;
+    color: $badge-blue-text;
+  }
+  &--type--solid--blue {
+    background: $badge-blue-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--red {
+    background: $badge-red-bg-subtle;
+    color: $badge-red-text;
+  }
+  &--type--solid--red {
+    background: $badge-red-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--orange {
+    background: $badge-orange-bg-subtle;
+    color: $badge-orange-text;
+  }
+  &--type--solid--orange {
+    background: $badge-orange-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--purple {
+    background: $badge-purple-bg-subtle;
+    color: $badge-purple-text;
+  }
+  &--type--solid--purple {
+    background: $badge-purple-bg-solid;
+    color: white;
+  }
+
+  &--type--subtle--yellow {
+    background: $badge-yellow-bg-subtle;
+    color: $badge-yellow-text;
+  }
+  &--type--solid--yellow {
+    background: $badge-yellow-bg-solid;
+    color: $badge-yellow-text;
+  }
+
+  &--type--subtle--teal {
+    background: $badge-teal-bg-subtle;
+    color: $badge-teal-text;
+  }
+  &--type--solid--teal {
+    background: $badge-teal-bg-solid;
+    color: white;
+  }
+}

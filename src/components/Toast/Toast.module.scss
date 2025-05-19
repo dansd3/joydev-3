@@ -1,0 +1,51 @@
+.toast {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-width: 560px;
+  overflow: hidden;
+  width: fit-content;
+
+  &__trim {
+    width: 3px;
+    flex-shrink: 0;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  &__iconWrapper {
+    display: flex;
+    padding-top: 2px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin-right: 20px;
+  }
+  &__desc {
+    text-align: left;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+}
