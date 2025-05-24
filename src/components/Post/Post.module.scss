@@ -1,0 +1,24 @@
+@use '../../styles/variables' as variables;
+.post {
+  padding: 0px 16px 16px;
+  height: 100%;
+  justify-content: unset !important;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    position: relative;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    color: variables.$badge-green-bg-solid;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    text-align: justify;
+  }
+}

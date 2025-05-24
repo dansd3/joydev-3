@@ -28,7 +28,7 @@
   border: 1px solid $border-color;
 }
 
-@mixin trim-style(){
+@mixin trim-style() {
   width: 3px;
   height: 100%;
   flex-shrink: 0;
