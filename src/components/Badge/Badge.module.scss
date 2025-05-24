@@ -1,9 +1,9 @@
-@use '../../styles/variables' as *;
+@use '../../styles/variables' as variables;
 
 .badge {
   display: inline-flex;
   align-items: center;
-  font-family: 'SF Pro Text';
+  font-family: variables.$font-text;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.3px;
@@ -24,74 +24,74 @@
   }
 
   &--type--subtle--neutral {
-    background: $badge-neutral-bg-subtle;
-    color: $badge-neutral-text;
+    background: variables.$badge-neutral-bg-subtle;
+    color: variables.$badge-neutral-text;
   }
   &--type--solid--neutral {
-    background: $badge-neutral-bg-solid;
-    color: white;
+    background: variables.$badge-neutral-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--green {
-    background: $badge-green-bg-subtle;
-    color: $badge-green-text;
+    background: variables.$badge-green-bg-subtle;
+    color: variables.$badge-green-text;
   }
   &--type--solid--green {
-    background: $badge-green-bg-solid;
-    color: white;
+    background: variables.$badge-green-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--blue {
-    background: $badge-blue-bg-subtle;
-    color: $badge-blue-text;
+    background: variables.$badge-blue-bg-subtle;
+    color: variables.$badge-blue-text;
   }
   &--type--solid--blue {
-    background: $badge-blue-bg-solid;
-    color: white;
+    background: variables.$badge-blue-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--red {
-    background: $badge-red-bg-subtle;
-    color: $badge-red-text;
+    background: variables.$badge-red-bg-subtle;
+    color: variables.$badge-red-text;
   }
   &--type--solid--red {
-    background: $badge-red-bg-solid;
-    color: white;
+    background: variables.$badge-red-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--orange {
-    background: $badge-orange-bg-subtle;
-    color: $badge-orange-text;
+    background: variables.$badge-orange-bg-subtle;
+    color: variables.$badge-orange-text;
   }
   &--type--solid--orange {
-    background: $badge-orange-bg-solid;
-    color: white;
+    background: variables.$badge-orange-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--purple {
-    background: $badge-purple-bg-subtle;
-    color: $badge-purple-text;
+    background: variables.$badge-purple-bg-subtle;
+    color: variables.$badge-purple-text;
   }
   &--type--solid--purple {
-    background: $badge-purple-bg-solid;
-    color: white;
+    background: variables.$badge-purple-bg-solid;
+    color: variables.$color-white;
   }
 
   &--type--subtle--yellow {
-    background: $badge-yellow-bg-subtle;
-    color: $badge-yellow-text;
+    background: variables.$badge-yellow-bg-subtle;
+    color: variables.$badge-yellow-text;
   }
   &--type--solid--yellow {
-    background: $badge-yellow-bg-solid;
-    color: $badge-yellow-text;
+    background: variables.$badge-yellow-bg-solid;
+    color: variables.$badge-yellow-text;
   }
 
   &--type--subtle--teal {
-    background: $badge-teal-bg-subtle;
-    color: $badge-teal-text;
+    background: variables.$badge-teal-bg-subtle;
+    color: variables.$badge-teal-text;
   }
   &--type--solid--teal {
-    background: $badge-teal-bg-solid;
-    color: white;
+    background: variables.$badge-teal-bg-solid;
+    color: variables.$color-white;
   }
 }

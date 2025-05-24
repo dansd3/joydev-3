@@ -27,3 +27,11 @@
   background: linear-gradient(360deg, $bg1 0%, $bg2 100%);
   border: 1px solid $border-color;
 }
+
+@mixin trim-style(){
+  width: 3px;
+  height: 100%;
+  flex-shrink: 0;
+  left: 0px;
+  position: absolute;
+}

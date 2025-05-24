@@ -1,5 +1,5 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/variables' as variables;
+@use '../../styles/mixins' as mixins;
 
 .button {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
-  font-family: 'SF Pro Text';
+  font-family: variables.$font-text;
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
@@ -25,30 +25,30 @@
   }
 
   &--variant--primary {
-    @include button-style(#ffffff, #116ab8, #0788de, $color-border);
+    @include mixins.button-style(variables.$color-white, #116ab8, #0788de, variables.$color-border);
   }
 
   &--variant--danger {
-    @include button-style(#ffffff, #d64540, #ec4c47, $color-border);
+    @include mixins.button-style(variables.$color-white, #d64540, variables.$badge-red-bg-solid, variables.$color-border);
   }
 
   &--variant--regular {
-    @include button-style($color-default, #f4f5f7, #ffffff, $color-border);
+    @include mixins.button-style(variables.$color-default, #f4f5f7, variables.$color-white, variables.$color-border);
   }
 
   &--variant--minimal {
-    @include button-style($color-link, #ffffff, #ffffff, transparent);
+    @include mixins.button-style(variables.$color-link, variables.$color-white, variables.$color-white, transparent);
     box-shadow: none;
   }
 
   &--variant--disabled {
-    @include button-style($color-default, #425a700f, #425a700f, transparent);
+    @include mixins.button-style(variables.$color-default, #425a700f, #425a700f, transparent);
     cursor: not-allowed;
     box-shadow: none;
   }
 
   &--variant--active {
-    @include button-style($color-default, #1070ca17, #1070ca17, $color-border);
+    @include mixins.button-style(variables.$color-default, #1070ca17, #1070ca17, variables.$color-border);
   }
 
   &__label {

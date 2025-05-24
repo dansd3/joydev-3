@@ -1,5 +1,7 @@
+@use '../../styles/variables' as variables;
+
 .card {
-  background: #ffffff;
+  background: variables.$color-white;
   border-radius: 5px;
 
   display: flex;

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { routes } from './routes/routes';
-import { Menu } from './components/Menu/Menu';
-import styles from './styles/App.module.scss';
+import { routes } from '../routes/routes';
+import { Menu } from '../components/Menu/Menu';
+import styles from './App.module.scss';
 
 function App() {
   return (

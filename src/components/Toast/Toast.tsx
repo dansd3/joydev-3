@@ -1,21 +1,22 @@
+import classNames from 'classnames';
 import styles from './Toast.module.scss';
 import { Card } from '../Card/Card';
 import { Text } from '../Text/Text';
-
-import { CheckIcon } from '../Icons/CheckIcon';
-import { InfoIcon } from '../Icons/InfoIcon';
-import { WarningIcon } from '../Icons/WarningIcon';
-import { CloseIcon } from '../Icons/CloseIcon';
-import { DangerIcon } from '../Icons/DangerIcon';
-import { Trim } from '../Icons/Trim';
+import  CheckIcon  from '../Icons/CheckIcon.svg?react';
+import  InfoIcon  from '../Icons/InfoIcon.svg?react';
+import  WarningIcon  from '../Icons/WarningIcon.svg?react';
+import  CloseIcon  from '../Icons/CloseIcon.svg?react';
+import  DangerIcon  from '../Icons/DangerIcon.svg?react';
+import  Trim  from '../Icons/Trim.svg?react';
 
 interface ToastProps {
   type: 'success' | 'info' | 'warning' | 'danger';
   title: string;
   description?: string;
+  className?: string;
 }
 
-export const Toast = ({ type, title, description }: ToastProps) => {
+export const Toast = ({ type, title, description, className }: ToastProps) => {
   const renderIcon = () => {
     switch (type) {
       case 'success':
@@ -29,9 +30,14 @@ export const Toast = ({ type, title, description }: ToastProps) => {
     }
   };
 
+  const trimClass = classNames(
+    styles.toast__trim,
+    styles[`toast__trim--${type}`]
+  );
+
   return (
-    <Card elevation={3} className={styles.toast}>
-      <Trim type={type} className={styles.toast__trim} />
+    <Card elevation={3} className={classNames(styles.toast, className)}>
+      <Trim className={trimClass} />
       <div className={styles.toast__main}>
         <div className={styles.toast__iconWrapper}>{renderIcon()}</div>
         <div className={styles.toast__content}>

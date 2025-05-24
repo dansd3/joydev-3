@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 import classNames from 'classnames';
-import { PlusIcon } from '../Icons/PlusIcon';
-import { CaretDownIcon } from '../Icons/CaretDownIcon';
+import  PlusIcon  from '../Icons/PlusIcon.svg?react';
+import  CaretDownIcon  from '../Icons/CaretDownIcon.svg?react';
 
 export interface ButtonProps {
   variant: 'primary' | 'danger' | 'regular' | 'minimal' | 'disabled' | 'active';

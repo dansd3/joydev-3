@@ -1,20 +1,20 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/variables' as variables;
+@use '../../styles/mixins' as mixins;
 
 .paragraph {
   margin: 0;
-  font-family: 'SF Pro Text';
-  color: $color-default;
+  font-family: variables.$font-text;
+  color: variables.$color-default;
   font-weight: 400;
   &--size--300 {
-    @include paragraph-style(12px, 18px, 12px, -0.04px);
+    @include mixins.paragraph-style(12px, 18px, 12px, -0.04px);
   }
 
   &--size--400 {
-    @include paragraph-style(14px, 21px, 12px, -0.05px);
+    @include mixins.paragraph-style(14px, 21px, 12px, -0.05px);
   }
 
   &--size--500 {
-    @include paragraph-style(16px, 24px, 16px, -0.06px);
+    @include mixins.paragraph-style(16px, 24px, 16px, -0.06px);
   }
 }

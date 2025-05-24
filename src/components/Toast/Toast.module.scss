@@ -1,3 +1,6 @@
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as variables;
+
 .toast {
   display: flex;
   flex-direction: row;
@@ -7,12 +10,26 @@
   width: fit-content;
 
   &__trim {
-    width: 3px;
-    flex-shrink: 0;
-    height: 100%;
-    left: 0px;
-    position: absolute;
+    &--warning {
+        @include mixins.trim-style();
+        color: variables.$badge-orange-bg-solid;
+    }
+
+    &--info {
+        @include mixins.trim-style();
+        color: variables.$badge-blue-bg-solid;
+    }
+
+    &--success{
+        @include mixins.trim-style();
+        color: variables.$badge-green-bg-solid;
+    }
+    &--danger{
+        @include mixins.trim-style();
+        color: variables.$badge-red-bg-solid;
+    }
   }
+  
 
   &__main {
     display: flex;
