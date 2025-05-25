@@ -9,13 +9,14 @@ export interface PostData {
   authorName: string;
 }
 
-const PostsContext = createContext({ posts: [] as PostData[] });
+const PostsContext = createContext({ posts: [] as PostData[], loading: true });
 
 export const usePosts = () => useContext(PostsContext);
 
 export const PostsProvider = ({ children }: { children: React.ReactNode }) => {
   const [posts, setPosts] = useState<PostData[]>([]);
   const [initialized, setInitialized] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (initialized) return;
@@ -34,11 +35,12 @@ export const PostsProvider = ({ children }: { children: React.ReactNode }) => {
         }));
 
         setPosts(posts);
+        setLoading(false);
       })
       .catch((error) => {
         console.error('Ошибка загрузки постов:', error);
       });
   }, [initialized]);
 
-  return <PostsContext.Provider value={{ posts }}>{children}</PostsContext.Provider>;
+  return <PostsContext.Provider value={{ posts, loading }}>{children}</PostsContext.Provider>;
 };
