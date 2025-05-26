@@ -11,25 +11,24 @@
 
   &__trim {
     &--warning {
-        @include mixins.trim-style();
-        color: variables.$badge-orange-bg-solid;
+      @include mixins.trim-style();
+      color: variables.$badge-orange-bg-solid;
     }
 
     &--info {
-        @include mixins.trim-style();
-        color: variables.$badge-blue-bg-solid;
+      @include mixins.trim-style();
+      color: variables.$badge-blue-bg-solid;
     }
 
-    &--success{
-        @include mixins.trim-style();
-        color: variables.$badge-green-bg-solid;
+    &--success {
+      @include mixins.trim-style();
+      color: variables.$badge-green-bg-solid;
     }
-    &--danger{
-        @include mixins.trim-style();
-        color: variables.$badge-red-bg-solid;
+    &--danger {
+      @include mixins.trim-style();
+      color: variables.$badge-red-bg-solid;
     }
   }
-  
 
   &__main {
     display: flex;

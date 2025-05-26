@@ -2,12 +2,12 @@ import classNames from 'classnames';
 import styles from './Toast.module.scss';
 import { Card } from '../Card/Card';
 import { Text } from '../Text/Text';
-import  CheckIcon  from '../Icons/CheckIcon.svg?react';
-import  InfoIcon  from '../Icons/InfoIcon.svg?react';
-import  WarningIcon  from '../Icons/WarningIcon.svg?react';
-import  CloseIcon  from '../Icons/CloseIcon.svg?react';
-import  DangerIcon  from '../Icons/DangerIcon.svg?react';
-import  Trim  from '../Icons/Trim.svg?react';
+import CheckIcon from '../Icons/CheckIcon.svg?react';
+import InfoIcon from '../Icons/InfoIcon.svg?react';
+import WarningIcon from '../Icons/WarningIcon.svg?react';
+import CloseIcon from '../Icons/CloseIcon.svg?react';
+import DangerIcon from '../Icons/DangerIcon.svg?react';
+import Trim from '../Icons/Trim.svg?react';
 
 interface ToastProps {
   type: 'success' | 'info' | 'warning' | 'danger';
@@ -30,10 +30,7 @@ export const Toast = ({ type, title, description, className }: ToastProps) => {
     }
   };
 
-  const trimClass = classNames(
-    styles.toast__trim,
-    styles[`toast__trim--${type}`]
-  );
+  const trimClass = classNames(styles.toast__trim, styles[`toast__trim--${type}`]);
 
   return (
     <Card elevation={3} className={classNames(styles.toast, className)}>

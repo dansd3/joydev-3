@@ -12,7 +12,7 @@ export const Menu = ({ className }: MenuProps) => {
 
   return (
     <nav className={classNames(styles.menu, className)}>
-      <h2 className={styles.menu__title}>UI KIT</h2>
+      <h2 className={styles.menu__title}>Меню</h2>
       <ul className={styles.menu__list}>
         {routes.map(({ path, label }) => {
           const isActive = location.pathname === path;

@@ -9,19 +9,8 @@ interface BadgeProps {
   className?: string;
 }
 
-export const Badge = ({
-  shape = 'badge',
-  type = 'subtle',
-  color,
-  children,
-  className,
-}: BadgeProps) => {
-  const classes = classNames(
-    styles.badge,
-    styles[`badge--shape--${shape}`],
-    styles[`badge--type--${type}--${color}`],
-    className
-  );
+export const Badge = ({ shape = 'badge', type = 'subtle', color, children, className }: BadgeProps) => {
+  const classes = classNames(styles.badge, styles[`badge--shape--${shape}`], styles[`badge--type--${type}--${color}`], className);
 
   return <span className={classes}>{children}</span>;
 };

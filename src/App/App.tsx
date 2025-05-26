@@ -5,16 +5,16 @@ import styles from './App.module.scss';
 
 function App() {
   return (
-      <div className={styles.app}>
-        <Menu className={styles.app__menu} />
-        <main className={styles.app__content}>
-          <Routes>
-            {routes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-          </Routes>
-        </main>
-      </div>
+    <div className={styles.app}>
+      <Menu className={styles.app__menu} />
+      <main className={styles.app__content}>
+        <Routes>
+          {routes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
+        </Routes>
+      </main>
+    </div>
   );
 }
 
